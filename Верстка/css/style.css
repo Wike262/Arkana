@@ -7,12 +7,31 @@ body{
 ul {
 	list-style-type: none;
 }
-
-
-
 header {
 	height: 100vh;
 	width: 100%;
+}
+.carousel-indicators {
+	left: -70%!important;
+
+}
+.cyrlce {
+	border: 3px solid #FFF;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	background-color: rgba(0,0,0,.5);
+}
+.carousel-indicators li {
+	height: 10px!important;
+	width: 10px!important;
+	border-radius: 2px!important;
+}
+.carousel-indicators .active {
+	background-color: #000!important;
 }
 .top-bar,.top-menu {
 	position: absolute;
@@ -51,4 +70,88 @@ header {
 .carousel img {
 	height: 100vh !important;
 	width: 100vw !important;
+}
+.section1 {
+	padding-top: 40px;
+}
+.section1 .description{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.description .item {
+	display: flex;
+	flex-direction: column;
+	align-items:  center;
+	text-align: center;
+}
+.description .item i {
+	font-size: 50px;
+}
+.description .item h3 {
+	font-size: 16px;
+}
+.description .item p {
+	font-size: 12px;
+}
+.section2 .samples {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.samples .item {
+	position:relative;
+	width: 25%;
+}
+.samples .item img{
+	width: 100%;
+	
+} 
+.samples .item a {
+	text-decoration: none;
+	width: 50%;
+	height: 10%;
+	background: #FFF;
+	color : #000;
+	text-align: center;
+	vertical-align: middle;
+	position: absolute;
+	left: 50%;
+	margin-left: -25%;
+	bottom: 10%;
+}
+.samples .item a:hover {
+	transition: all .3s ease;
+	background: #000;
+	color: #FFF;	
+}
+.carousel-caption {
+	right: +50%!important;
+	top: 40%!important;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left!important;
+}
+.carousel-caption h1 {
+	color: #000;
+}
+.carousel-caption p {
+	color: grey;
+}
+.carousel-caption a {
+	text-decoration: none;
+	color: #000;
+	background-color: #FFF;
+	display: flex;
+	height: 40px;
+	width: 200px;
+	justify-content: center;
+	align-items: center;
+}
+.carousel-caption a:hover {
+	text-decoration: none;
+	color: #FFF;
+	background-color: #000;
+	transition: all .3s ease;
 }
