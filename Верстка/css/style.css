@@ -11,6 +11,37 @@ header {
 	height: 100vh;
 	width: 100%;
 }
+.carousel-caption {
+	right: +50%;
+	top: 40%;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+}
+.carousel-caption h1 {
+	color: #000;
+}
+.carousel-caption p {
+	color: grey;
+}
+.carousel-caption a,.bags .description a,.samples .item a,.top a   {
+	text-decoration: none;
+	color: #000;
+	border: 2px #000 solid;
+	background-color: #FFF;
+	display: flex;
+	height: 40px;
+	width: 200px;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+}
+.carousel-caption a:hover,.bags .description a:hover, .samples .item a:hover,.top a:hover {
+	text-decoration: none;
+	color: #FFF;
+	background-color: #000;
+	transition: all .3s ease;
+}
 .carousel-indicators {
 	left: -70%;
 }
@@ -65,13 +96,14 @@ header {
 .top-menu ul li {
 	padding: 0 30px;
 	font-weight: 500;
+	text-transform: uppercase;
 }
 .carousel img {
 	height: 100vh;
 	width: 100vw;
 }
 .section1 {
-	padding-top: 40px;
+	padding: 50px 0;
 }
 .section1 .description{
 	width: 100%;
@@ -87,6 +119,7 @@ header {
 }
 .description .item i {
 	font-size: 50px;
+	margin-bottom: 20px;
 }
 .description .item h3 {
 	font-size: 16px;
@@ -106,68 +139,30 @@ header {
 }
 .samples .item img,.top .item img{
 	width: 100%;
+	height: 350px;
 } 
 .samples .item a {
-	display: flex;
-	width: 50%;
-	height: 10%;
-	align-items: center;
-	justify-content: center;
-	text-decoration: none;
-	background: #FFF;
-	color : #000;
-	text-align: center;
-	vertical-align: middle;
 	position: absolute;
 	left: 50%;
-	margin-left: -25%;
+	transform: translate(-50%, -50%);
 	bottom: 10%;
 }
-.samples .item a:hover {
-	transition: all .3s ease;
-	background: #000;
-	color: #FFF;	
+.section3 {
+	margin: 50px 0;
 }
-.carousel-caption {
-	right: +50%;
-	top: 40%;
-	flex-direction: column;
-	align-items: flex-start;
-	text-align: left;
-}
-.carousel-caption h1 {
-	color: #000;
-}
-.carousel-caption p {
-	color: grey;
-}
-.carousel-caption a {
-	text-decoration: none;
-	color: #000;
-	background-color: #FFF;
-	display: flex;
-	height: 40px;
-	width: 200px;
-	justify-content: center;
-	align-items: center;
-}
-.carousel-caption a:hover {
-	text-decoration: none;
-	color: #FFF;
-	background-color: #000;
-	transition: all .3s ease;
-}
-.title {
+.top-trending .title {
 	display: flex;
 	width: 60%;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	margin: 40px auto;
+	margin: 0 auto;
+	margin-bottom: 50px;
 }
 .top {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 .top .item {
 	display: flex;
@@ -185,7 +180,7 @@ header {
 .top .item p {
 	font-size: 14px;
 }
-.title .buttons a{
+.top-trending .title .buttons a{
 	color: #000;
 	text-decoration: none;
 	display: flex;
@@ -197,7 +192,7 @@ header {
 	margin-left: 20px;
 	transition: all .3s ease;
 }
-.title .buttons a:before {
+.top-trending .title .buttons a:before {
 	content: "";
 	position: absolute;
 	height: 20px;
@@ -208,11 +203,11 @@ header {
 	z-index: -1;	
 	transition: all .3s ease;
 }
-.title .buttons a:hover {
+.top-trending .title .buttons a:hover {
 	color: #FFF;
 	background-color: #000;
 }
-.title .buttons a:hover:before {
+.top-trending .title .buttons a:hover:before {
 	background-color: #000;
 }
 .top .item img {
@@ -246,4 +241,77 @@ header {
 	width: 40px;
 	font-size: 12px;
 	z-index: 1;
+}
+.top a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.bags .item {
+	display: flex;
+	flex-direction: row;
+	height: 500px;
+}
+.bags .title,.bags .title .description {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.bags .title .description {
+	width: 80%;
+}
+.partners {
+	width: 100%;
+	margin: 50px 0;
+}
+.partners ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0;
+}
+.partners ul li a{
+	color: grey;
+	text-decoration: none;
+	transition: all .3s ease;
+}
+.partners ul li a:hover{
+	color: #000;
+	transform: scale(2);
+}
+.instagram {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+.instagram:after {
+ content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.4);
+  z-index: 2;
+}
+.instagram:before {
+	content: "#Instagram";
+	position: absolute;
+	color: #FFF;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 26px;
+}
+.instagram .item {
+	width: calc(100%/6)
+}
+.instagram img {
+	height: 200px;	
+	width: 100%;
 }
