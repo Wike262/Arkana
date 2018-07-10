@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arkana</title>
-  <link rel="icon" type="image/x-icon" href="img/guuui.com.ico">
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>Arkana</title>
+  	<link rel="icon" type="image/x-icon" href="img/guuui.com.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900&amp;subset=latin-ext" rel="stylesheet">
   	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,600,700" rel="stylesheet">
@@ -17,17 +17,48 @@
   	<link type="text/css" rel="stylesheet" href="css/style.css">
 <body>
   <header>
+  	<script>
+    		function show() {
+    			if (document.getElementById("hide_show").classList.contains("active_menu")) {
+    				document.getElementById("hide_show").classList.remove("active_menu");	
+    			}
+    			else {
+    				document.getElementById("hide_show").classList.add("active_menu");
+    			}
+    		} 
+    	</script>
     <div class="top-bar">
         <div class="container">
           <div class="row">
-            <i class="fa fa-bars" aria-hidden="true"></i>
+          	<div class="hide">
+            <i class="fa fa-bars" aria-hidden="true" onClick="show()"></i>
+            <div class="languages" id="hide_show">
+    	<ul>
+    		<li class="active"><a href="#"></a>English</li>
+    		<li><a href="#"></a>French</li>
+    		<li><a href="#"></a>Spain</li>
+    	</ul>
+    	 </div>
+          	</div>
             <i class="fa fa-search" aria-hidden="true"></i>
             <h1>ARKANA</h1>
             <i class="fa fa-share-alt" aria-hidden="true"></i>
             <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+              
+   
+    <div class="search">
+    	<input type="search">
+    </div>
+    <div class="share">
+    	
+    </div>
+    <div class="cart">
+    	
+    </div>
           </div>
         </div>
     </div>
+
     <div class="top-menu">
       <div class="container">
         <div class="row">
@@ -42,6 +73,7 @@
         </div>
       </div>
     </div>
+    
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -51,7 +83,7 @@
     <div class="carousel-item active">
       <img class="d-block w-100" src="img/Pic.jpg" alt="Первый слайд">
       <div class="carousel-caption d-none d-md-flex">
-      	<h1>Tees & Tops</h1>
+      	<h2>Tees & Tops</h2>
       	<p>Duis aute irure dolor in reprehenderit in voluptate velit<br> esse cillum dolore eu fugiar nulla pariatur.</p>
       	<a href="#">Discovery more</a>
       </div>
@@ -59,7 +91,7 @@
     <div class="carousel-item">
       <img class="d-block w-100 " src="img/Pic.jpg"" alt="Второй слайд">
         <div class="carousel-caption d-none d-md-flex">
-      	<h1>Tees & Tops</h1>
+      	<h2>Tees & Tops</h2>
       	<p>Duis aute irure dolor in reprehenderit in voluptate velit<br> esse cillum dolore eu fugiar nulla pariatur.</p>
       	<a href="#">Discovery more</a>
       </div>
@@ -80,7 +112,6 @@
   </a>
 </div>
 <script>
-
   $('.carousel').carousel({
   interval: 5000
 })</script>
@@ -258,6 +289,66 @@
    	</div>
    </div>
    <footer>
-   	
+   	<div class="container">
+   		<div class="row">
+   			<div class="arkana col-lg-4">
+   				<h2>Arkana</h2>
+   				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+   				<div class="social">
+   					<i class="fa fa-facebook" aria-hidden="true"></i>
+   					<i class="fa fa-instagram" aria-hidden="true"></i>
+   					<i class="fa fa-pinterest" aria-hidden="true"></i>
+   					<i class="fa fa-twitter" aria-hidden="true"></i>
+   				</div>
+   				<form action="" method="post">
+   					<input type="email" placeholder="Enter yout e-mail ">
+   					<button type="submit">Subsribe</button>
+   				</form>
+   			</div>
+   			<div class="products col-lg-3">
+   				<h5>Products</h5>
+   				<ul>
+   					<li>Prices drop</li>
+   					<li>New products</li>
+   					<li>Best salses</li>
+   				</ul>
+   			</div>
+   			<div class="information col-lg-3">
+   				<h5>Information</h5>
+   				<ul>
+   					<li>Delivery</li>
+   					<li>Legal Notice</li>
+   					<li>Terms and conditions of use</li>
+   					<li>About us</li>
+   					<li>Secure payment</li>
+   					<li>Contact us</li>
+   					<li>Sitemap</li>
+   					<li>Stores</li>
+   				</ul>
+   			</div>
+   			<div class="account col-lg-2">
+   				<h5>Your account</h5>
+   				<ul>
+   					<li>Addresses</li>
+   					<li>Credit slips</li>
+   					<li>Orders</li>
+   					<li>Personal info</li>
+   				</ul>
+   			</div>
+   			</div>
+   		</div>
+   	</div>
+  
    </footer>
+    	<div class="copyrates col-12">
+   		<div class="container">
+   			<div class="row justify-content-between">  				
+   				<p><i class="fa fa-copyright" aria-hidden="true"></i> 2018-Ecommerse software by PrestaShop<span>TM</span></p>
+   				<div class="pay">
+   					<img src="img/visa.png" alt="1">
+   					<img src="img/mastercard.png" alt="2">
+   					<img src="img/paypal.png" alt="3">
+   				</div>
+   			</div>
+   		</div>
 </body>
