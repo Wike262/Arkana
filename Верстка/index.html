@@ -7,7 +7,7 @@
   	<link rel="icon" type="image/x-icon" href="img/guuui.com.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900&amp;subset=latin-ext" rel="stylesheet">
-  	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,600,700" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
   	<script src="https://use.fontawesome.com/737b32b88e.js"></script>
   	<script src="js/carousel.js"></script>
   	<script src="js/util.js"></script>
@@ -17,51 +17,48 @@
   	<link type="text/css" rel="stylesheet" href="css/style.css">
 <body>
   <header>
-  	<script>
-    		function show() {
-    			if (document.getElementById("hide_show").classList.contains("active_menu")) {
-    				document.getElementById("hide_show").classList.remove("active_menu");	
-    			}
-    			else {
-    				document.getElementById("hide_show").classList.add("active_menu");
-    			}
-    		} 
-    	</script>
     <div class="top-bar">
         <div class="container">
           <div class="row">
           	<div class="hide">
-            <i class="fa fa-bars" aria-hidden="true" onClick="show()"></i>
-            <div class="languages" id="hide_show">
-    	<ul>
-    		<li class="active"><a href="#"></a>English</li>
-    		<li><a href="#"></a>French</li>
-    		<li><a href="#"></a>Spain</li>
-    	</ul>
-    	 </div>
+              <i class="fa fa-bars" aria-hidden="true"></i>
+              <div class="languages" id="hide_show">
+    	         <ul>
+    	       	   <li class="active"><a href="#"></a>English</li>
+    	           <li><a href="#"></a>French</li>
+    	       	   <li><a href="#"></a>Spain</li>
+    	         </ul>
+    	       </div>
           	</div>
-            <i class="fa fa-search" aria-hidden="true"></i>
+            <div class="hide">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <div class="search">
+                <input type="search">
+                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+              </div>
+            </div>
             <h1>ARKANA</h1>
-            <i class="fa fa-share-alt" aria-hidden="true"></i>
-            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-              
-   
-    <div class="search">
-    	<input type="search">
-    </div>
-    <div class="share">
-    	
-    </div>
-    <div class="cart">
-    	
-    </div>
+            <div class="hide">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+              <div class="share">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-pinterest" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="hide">
+              <i class="fa fa-shopping-basket last" aria-hidden="true"></i>
+              <div class="cart">
+
+              </div>
+            </div>
           </div>
         </div>
     </div>
-
-    <div class="top-menu">
+    <div class="top-menu d-none d-md-block">
       <div class="container">
-        <div class="row">
+        <div class="row align-items-center justify-content-center">
           <ul>
             <li>Dresses</li>
             <li>Blouses</li>
@@ -72,8 +69,7 @@
           </ul>
         </div>
       </div>
-    </div>
-    
+    </div> 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -112,9 +108,8 @@
   </a>
 </div>
 <script>
-  $('.carousel').carousel({
-  interval: 5000
-})</script>
+  $('.carousel').carousel({interval: 5000})
+</script>
    </header>
    <div class="section1">
    	<div class="container">
@@ -143,19 +138,19 @@
    	<div class="container-fluid">
    		<div class="row">
    			<div class="samples">
-   				<div class="item col-lg-3">
+   				<div class="item ">
    					<img src="img/Image.jpg" alt="1">
    					<a href="#">DRESSES</a>
    				</div>
-   				<div class="item col-lg-3">
+   				<div class="item ">
    					<img src="img/Img2.jpg" alt="1">
    					<a href="#">BLOUSES</a>
    				</div>
-   				<div class="item col-lg-3">
+   				<div class="item ">
    					<img src="img/Img1.jpg" alt="1">
    					<a href="#">T-SHIRTS</a>
    				</div>
-   				<div class="item col-lg-3">
+   				<div class="item ">
    					<img src="img/Pic1.jpg" alt="1">
    					<a href="#">OUTWEAR</a>
    				</div>
@@ -167,7 +162,7 @@
    	<div class="container-fluid">
    		<div class="row">
    			<div class="top-trending">
-   				<div class="title col-8">
+   				<div class="title">
    					<h2>Top Trending</h2>
    					<p>Duis aute irute dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.</p>
    					<div class="buttons">
@@ -177,47 +172,79 @@
    					</div>
    				</div>
    				<div class="top">
-   					<div class="item col-lg-3 new ">
-   						<img src="img/Image.jpg" alt="1">
+   					<div class="item new">
+              <div class="op">
+   						<img src="img/Imag.jpg" alt="1">
+              </div>
    						<h4>Excepteur sint occaecat cupidatat</h4>
    						<p>$ 199.00</p>
    					</div>
-   					<div class="item col-lg-3 ">
-   						<img src="img/Image.jpg" alt="2">
+   					<div class="item">
+              <div class="op">
+   						<img src="img/Image1.jpg" alt="2">
+              </div>
    						<h4>Excepteur sint occaecat cupidatat</h4>
    						<p>$ 199.00</p>
    					</div>
-   					<div class="item col-lg-3 new price">
-   						<img src="img/Image.jpg" alt="3">
+   					<div class="item new price">
+              <div class="op">
+   						<img src="img/Pic(1).jpg" alt="3">
+              </div>
    						<h4>Excepteur sint occaecat cupidatat</h4>
    						<p>$ 199.00</p>
    					</div>
-   					<div class="item col-lg-3">
-   						<img src="img/Image.jpg" alt="4">
+   					<div class="item">
+              <div class="op">
+   						<img src="img/Pic2.jpg" alt="4">
+              </div>
    						<h4>Excepteur sint occaecat cupidatat</h4>
    						<p>$ 199.00</p>
    					</div>
-   					<div class="item col-lg-3 price">
-   						<img src="img/Image.jpg" alt="5">
+   					<div class="item price">
+              <div class="op">
+   						<img src="img/Img3.jpg" alt="5">
+              </div>
    						<h4>Excepteur sint occaecat cupidatat</h4>
    						<p>$ 199.00</p>
    					</div>
-   					<div class="item col-lg-3">
-   						<img src="img/Image.jpg" alt="6">
+   					<div class="item">
+              <div class="op">
+   						<img src="img/Pic3.jpg" alt="6">
+              </div>
    						<h4>Excepteur sint occaecat cupidatat</h4>
    						<p>$ 199.00</p>
    					</div>
-   					<div class="item col-lg-3">
-   						<img src="img/Image.jpg" alt="7">
+   					<div class="item">
+              <div class="op">
+   						<img src="img/Img4.jpg" alt="7">
+              </div>
    						<h4>Excepteur sint occaecat cupidatat</h4>
    						<p>$ 199.00</p>
    					</div>
-   					<div class="item col-lg-3">
-   						<img src="img/Image.jpg" alt="8">
+   					<div class="item">
+              <div class="op">
+   						<img src="img/Img5.jpg" alt="8">
+              </div>
    						<h4>Excepteur sint occaecat cupidatat</h4>
    						<p>$ 199.00</p>
    					</div>
+            <div class="item">
+              <div class="op">
+              <img src="img/Img6.jpg" alt="8">
+              </div>
+              <h4>Excepteur sint occaecat cupidatat</h4>
+              <p>$ 199.00</p>
+            </div>
+            <div class="item">
+              <div class="op">
+              <img src="img/Img7.jpg" alt="8">
+              </div>
+              <h4>Excepteur sint occaecat cupidatat</h4>
+              <p>$ 199.00</p>
+            </div>
+            <div class="w-100 d-flex justify-content-center">
    					<a href="#">All products</a>
+            </div>
    				</div>
    			</div>
    		</div>
@@ -228,8 +255,10 @@
    		<div class="row">
    			<div class="bags">
    				<div class="item">
-   					<img src="img/Img.jpg" alt="1" class="col-6">
-   					<div class="title col-6">
+            <div class="image">
+   					  <img src="img/Img.jpg" alt="1">
+            </div>
+   					<div class="title ">
    						<div class="description">
    							<h4>Bags & Shoes</h4>
    							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulia pariatur.</p>
@@ -285,14 +314,14 @@
    </div>
    <div class="section7">
    	<div class="map">
-   		
+   		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A69eadca6f66cf926995feeaa660580af5427c2298b6368dff2e7612df0112ea1&amp;width=100%25&amp;height=351&amp;lang=ru_RU&amp;scroll=true"></script>
    	</div>
    </div>
    <footer>
    	<div class="container">
-   		<div class="row">
+   		<div class="row justify-content-between">
    			<div class="arkana col-lg-4">
-   				<h2>Arkana</h2>
+   				<h3>Arkana</h2>
    				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
    				<div class="social">
    					<i class="fa fa-facebook" aria-hidden="true"></i>
@@ -305,42 +334,41 @@
    					<button type="submit">Subsribe</button>
    				</form>
    			</div>
-   			<div class="products col-lg-3">
-   				<h5>Products</h5>
+   			<div class="products col-lg-2">
+   				<h4>Products</h5>
    				<ul>
-   					<li>Prices drop</li>
-   					<li>New products</li>
-   					<li>Best salses</li>
+   					<li><a href="#">Prices drop</a></li>
+   					<li><a href="#">New products</a></li>
+   					<li><a href="#">Best salses</a></li>
    				</ul>
    			</div>
-   			<div class="information col-lg-3">
-   				<h5>Information</h5>
+   			<div class="information col-lg-2">
+   				<h4>Information</h5>
    				<ul>
-   					<li>Delivery</li>
-   					<li>Legal Notice</li>
-   					<li>Terms and conditions of use</li>
-   					<li>About us</li>
-   					<li>Secure payment</li>
-   					<li>Contact us</li>
-   					<li>Sitemap</li>
-   					<li>Stores</li>
+   					<li><a href="#">Delivery</a></li>
+   					<li><a href="#">Legal Notice</a></li>
+   					<li><a href="#">Terms and conditions of use</a></li>
+   					<li><a href="#">About us</a></li>
+   					<li><a href="#">Secure payment</a></li>
+   					<li><a href="#">Contact us</a></li>
+   					<li><a href="#">Sitemap</a></li>
+   					<li><a href="#">Stores</a></li>
    				</ul>
    			</div>
    			<div class="account col-lg-2">
-   				<h5>Your account</h5>
+   				<h4>Your account</h5>
    				<ul>
-   					<li>Addresses</li>
-   					<li>Credit slips</li>
-   					<li>Orders</li>
-   					<li>Personal info</li>
+   					<li><a href="#">Addresses</a></li>
+   					<li><a href="#">Credit slips</a></li>
+   					<li><a href="#">Orders</a></li>
+   					<li><a href="#">Personal info</a></li>
    				</ul>
    			</div>
    			</div>
    		</div>
    	</div>
-  
    </footer>
-    	<div class="copyrates col-12">
+    	<div class="copyrates">
    		<div class="container">
    			<div class="row justify-content-between">  				
    				<p><i class="fa fa-copyright" aria-hidden="true"></i> 2018-Ecommerse software by PrestaShop<span>TM</span></p>
