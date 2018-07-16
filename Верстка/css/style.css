@@ -42,7 +42,7 @@ p {
 .top-bar .last{
 	padding-right: 0;
 }
-.top-bar .container {
+.top-bar .w-100 {
 	border-bottom: 1px solid  #d4d4d4;
 }
 .hide {
@@ -50,7 +50,8 @@ p {
 }
 .languages,
 .search,
-.share {
+.share,
+.cart {
 	display: flex;
 	position: absolute;
 	width: 0;
@@ -93,6 +94,14 @@ p {
 	align-items: center;
 	justify-content: space-around;
 }
+.cart {
+	left: initial;
+	right: 40%;
+}
+.cart .buys,
+.cart .top-row {
+	display: none;
+}
 .share i {
 	display: none;
 	color: #7b7b7b;
@@ -104,7 +113,9 @@ p {
 .hide i:hover +.search,
 .search:hover,
 .hide i:hover +.share,
-.share:hover{
+.share:hover,
+.hide i:hover +.cart,
+.cart:hover{
 	display: flex;
 	opacity: 1;
 	z-index: 10;
@@ -119,8 +130,16 @@ p {
 .hide i:hover +.search button,
 .search:hover button ,
 .hide i:hover +.share i,
-.share:hover i {
+.share:hover i,
+.hide i:hover +.cart .buys,
+.cart:hover .buys  {
 	display: block;
+}
+.hide i:hover +.cart .top-row,
+.cart:hover .top-row {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
 }
 .hide i:hover +.search,
 .search:hover {
@@ -136,7 +155,19 @@ p {
 	color: #000;
 	transform: scale(1.4);
 }
+.hide i:hover +.cart,
+.cart:hover {
+	flex-wrap: wrap;
+	height: 100vh;
+	width: 350px;
+}
+.top-row button {
+	position: absolute;
+	right: 3%;
+	top: 1%;
+}
 .top-menu {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -152,6 +183,15 @@ p {
 .top-menu ul li {
 	font-weight: bold;
 	text-transform: uppercase;
+}
+.cart .item {
+	display: flex;
+	flex-direction: row;
+}
+
+.cart .title {
+	display: flex;
+	flex-direction: column;
 }
 .carousel img {
 	height: 100vh;
