@@ -3,6 +3,8 @@
     outline: none;
     &:hover
         outline: none;
+body
+    overflow: hidden;
 ul
     list-style: none;
     padding: 0;
@@ -26,6 +28,7 @@ header
             ul
                 li
                     a
+                        display: none;
                         color: #b7b7b7;
                 .active
                     a
@@ -56,21 +59,57 @@ header
                 li
                     a
                         i
-                            color: #8d8d8d;
+                            color: #dddddd;
                             padding: 0;
                             font-size: 0;
         .basket
+            right: -240%;
+            top: -50%;
+            padding: 0;
+            .calc
+                display: none;
+                .title
+                    border-top: 2px solid #f9f9f9;
+                .price
+                    border-bottom: 2px solid #f9f9f9;
+                h4
+                    font-size: 18px;
+                .total
+                    button
+                        background: #000000;
+                        border-radius: 20px;
+                        width: 100%;
+                        color: #ffffff;
+                        text-transform: uppercase;
+                        padding:  0 30px;
+            .title
+                display: none;
             button
+                display: none;
+                float: right;
                 border: none;
                 background: #ffffff;
             .cart-item
+                display: none;
+                margin-top: 20px;
                 position: relative;
-                h3
-                    font-size: 20px;
+                img
+                    width: 90px;
+                    height: 120px;
+                    float: left;
+                .description
+                    padding-left: 10px;
+                    h3
+                        font-size: 20px;
+                        margin: 0;
+                    p
+                        margin: 0;
+                    .price
+                        p
+                            margin-left: 15px;
+                            vertical-align: middle;
                 button
-                    position: absolute;
-                    top: 10%;
-                    right: 0;
+                    float: right;
                     border: none;
                     background: #ffffff;
         i
@@ -78,13 +117,19 @@ header
             padding: 12px;
             cursor: pointer;
             &:hover
-                &+.lang,
+                &+.lang
+                    box-shadow: 0 0 20px rgba(0,0,0,.5);
                     padding: 10px;
                     padding-left: 15px;
                     opacity: 1;
                     width: 80px;
                     height: 90px;
+                    ul
+                        li
+                            a
+                                display: block;
                 &+.search
+                    box-shadow: 0 0 20px rgba(0,0,0,.5);
                     opacity: 1;
                     width: 250px;
                     height: 40px;
@@ -97,6 +142,7 @@ header
                         i
                             font-size: 16px;
                 &+.share
+                    box-shadow: 0 0 20px rgba(0,0,0,.5);
                     opacity: 1;
                     width: 170px;
                     height: 50px;
@@ -108,11 +154,13 @@ header
                                     padding: 10px;
                                     font-size: 24px;
                 &+.basket
+                    box-shadow: 0 0 20px rgba(0,0,0,.5);
+                    padding: 20px;
                     opacity: 1;
-                    right: -220%;
-                    top: -50%;
-                    width: 25vw;
+                    width: 30vw;
                     height: 100vh;
+                    button,.calc,.cart-item,.title
+                        display: block;
         .lang,.search,.share,.basket
             position: absolute;
             width: 0;
@@ -126,6 +174,10 @@ header
                 opacity: 1;
                 width: 80px;
                 height: 90px;
+                ul
+                    li
+                        a
+                            display: block;
         .search
             &:hover,&:focus-within
                 opacity: 1;
@@ -154,10 +206,11 @@ header
         .basket
             &:hover,&:focus-within
                 opacity: 1;
-                right: -220%;
-                top: -50%;
-                width: 25vw;
+                padding: 20px;
+                width: 30vw;
                 height: 100vh;
+                button,.calc,.cart-item,.title
+                    display: block;
         &+.w-100
             border-top: 1px solid #d4d4d4;
             margin: 20px 0;
@@ -166,3 +219,7 @@ header
             li
                 a
                     text-transform: uppercase;
+                    z-index: 0;
+            .menu
+                opacity: 0;
+                background: #ffffff;

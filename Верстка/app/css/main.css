@@ -6,6 +6,9 @@
   *:hover {
     outline: none; }
 
+body {
+  overflow: hidden; }
+
 ul {
   list-style: none;
   padding: 0;
@@ -28,6 +31,7 @@ header {
   header .hiden {
     position: relative; }
     header .hiden .lang ul li a {
+      display: none;
       color: #b7b7b7; }
     header .hiden .lang ul .active a {
       color: #000000; }
@@ -53,33 +57,75 @@ header {
     header .hiden .share {
       right: 0; }
       header .hiden .share ul li a i {
-        color: #8d8d8d;
+        color: #dddddd;
         padding: 0;
         font-size: 0; }
-    header .hiden .basket button {
-      border: none;
-      background: #ffffff; }
-    header .hiden .basket .cart-item {
-      position: relative; }
-      header .hiden .basket .cart-item h3 {
-        font-size: 20px; }
-      header .hiden .basket .cart-item button {
-        position: absolute;
-        top: 10%;
-        right: 0;
+    header .hiden .basket {
+      right: -240%;
+      top: -50%;
+      padding: 0; }
+      header .hiden .basket .calc {
+        display: none; }
+        header .hiden .basket .calc .title {
+          border-top: 2px solid #f9f9f9; }
+        header .hiden .basket .calc .price {
+          border-bottom: 2px solid #f9f9f9; }
+        header .hiden .basket .calc h4 {
+          font-size: 18px; }
+        header .hiden .basket .calc .total button {
+          background: #000000;
+          -webkit-border-radius: 20px;
+                  border-radius: 20px;
+          width: 100%;
+          color: #ffffff;
+          text-transform: uppercase;
+          padding: 0 30px; }
+      header .hiden .basket .title {
+        display: none; }
+      header .hiden .basket button {
+        display: none;
+        float: right;
         border: none;
         background: #ffffff; }
+      header .hiden .basket .cart-item {
+        display: none;
+        margin-top: 20px;
+        position: relative; }
+        header .hiden .basket .cart-item img {
+          width: 90px;
+          height: 120px;
+          float: left; }
+        header .hiden .basket .cart-item .description {
+          padding-left: 10px; }
+          header .hiden .basket .cart-item .description h3 {
+            font-size: 20px;
+            margin: 0; }
+          header .hiden .basket .cart-item .description p {
+            margin: 0; }
+          header .hiden .basket .cart-item .description .price p {
+            margin-left: 15px;
+            vertical-align: middle; }
+        header .hiden .basket .cart-item button {
+          float: right;
+          border: none;
+          background: #ffffff; }
     header .hiden i {
       font-size: 24px;
       padding: 12px;
       cursor: pointer; }
       header .hiden i:hover + .lang {
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         padding: 10px;
         padding-left: 15px;
         opacity: 1;
         width: 80px;
         height: 90px; }
+        header .hiden i:hover + .lang ul li a {
+          display: block; }
       header .hiden i:hover + .search {
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         opacity: 1;
         width: 250px;
         height: 40px; }
@@ -92,6 +138,8 @@ header {
           header .hiden i:hover + .search button i {
             font-size: 16px; }
       header .hiden i:hover + .share {
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         opacity: 1;
         width: 170px;
         height: 50px; }
@@ -100,11 +148,14 @@ header {
           padding: 10px;
           font-size: 24px; }
       header .hiden i:hover + .basket {
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        padding: 20px;
         opacity: 1;
-        right: -220%;
-        top: -50%;
-        width: 25vw;
+        width: 30vw;
         height: 100vh; }
+        header .hiden i:hover + .basket button, header .hiden i:hover + .basket .calc, header .hiden i:hover + .basket .cart-item, header .hiden i:hover + .basket .title {
+          display: block; }
     header .hiden .lang, header .hiden .search, header .hiden .share, header .hiden .basket {
       position: absolute;
       width: 0;
@@ -117,6 +168,8 @@ header {
       opacity: 1;
       width: 80px;
       height: 90px; }
+      header .hiden .lang:hover ul li a, header .hiden .lang:focus-within ul li a {
+        display: block; }
     header .hiden .search:hover, header .hiden .search:focus-within {
       opacity: 1;
       width: 250px;
@@ -139,12 +192,17 @@ header {
         font-size: 24px; }
     header .hiden .basket:hover, header .hiden .basket:focus-within {
       opacity: 1;
-      right: -220%;
-      top: -50%;
-      width: 25vw;
+      padding: 20px;
+      width: 30vw;
       height: 100vh; }
+      header .hiden .basket:hover button, header .hiden .basket:hover .calc, header .hiden .basket:hover .cart-item, header .hiden .basket:hover .title, header .hiden .basket:focus-within button, header .hiden .basket:focus-within .calc, header .hiden .basket:focus-within .cart-item, header .hiden .basket:focus-within .title {
+        display: block; }
     header .hiden + .w-100 {
       border-top: 1px solid #d4d4d4;
       margin: 20px 0; }
   header .nav nav li a {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    z-index: 0; }
+  header .nav nav .menu {
+    opacity: 0;
+    background: #ffffff; }
