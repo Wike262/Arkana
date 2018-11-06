@@ -108,4 +108,17 @@ $('.slide-nav-button').click(function() {
             'background-color': '#000000'
         });
     }
+});
+function hover()
+{
+    if($('.hover').css({'display': 'none'}))
+    {
+        $('.hover').css({'display': 'block'});
+    }else
+    {
+        $('.hover').css({'display': 'none'});
+    }
+};
+$('#menu').click(function() {
+    hover();
 })

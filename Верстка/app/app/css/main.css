@@ -78,6 +78,32 @@ body {
             justify-content: center;
     width: 20%;
     height: 100vh; }
+    .slide .description h2 {
+      font-size: 52px;
+      font-weight: lighter; }
+    .slide .description p {
+      color: #bbbbbb; }
+    .slide .description button {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 70%;
+      height: 10%;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      background: #000000;
+      font-size: 16px;
+      outline: none;
+      border: none;
+      color: #ffffff;
+      text-transform: uppercase; }
+      .slide .description button:hover {
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        cursor: pointer; }
 
 #prev-button, #next-button {
   position: absolute;
@@ -104,7 +130,9 @@ body {
   top: calc(50% - 25px); }
   #prev-button:hover, #next-button:hover {
     cursor: pointer;
-    background: #000000; }
+    background: #000000;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); }
 
 #prev-button {
   left: 20px; }
@@ -130,7 +158,9 @@ body {
             border-radius: 5px;
     margin: 3px; }
     #nav-buttons .slide-nav-button:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); }
 
 header {
   width: 100%; }
@@ -140,7 +170,30 @@ header {
       border-bottom: 1px solid #d4d4d4; }
     header .container .row .logotype {
       margin: 0 auto; }
-    header .container .row .header-navigaton i {
-      padding: 10px;
-      font-size: 24px;
-      cursor: pointer; }
+    header .container .row .header-navigaton {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      header .container .row .header-navigaton .hidden {
+        position: relative; }
+        header .container .row .header-navigaton .hidden i {
+          padding: 10px;
+          font-size: 24px;
+          cursor: pointer; }
+        header .container .row .header-navigaton .hidden .hover {
+          display: none; }
+    header .container .row ul {
+      padding-top: 20px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+      text-transform: uppercase;
+      font-weight: bold; }
+      header .container .row ul li {
+        cursor: pointer; }

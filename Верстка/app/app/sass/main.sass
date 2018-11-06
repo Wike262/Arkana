@@ -1,109 +1,144 @@
 *
-    transition: all .3s ease
+	transition: all .3s ease
 ul
-    list-style-type: none
-    padding: 0
+	list-style-type: none
+	padding: 0
 body
-    position: relative
+	position: relative
 #slider
-    position: absolute
-    width: 100%
-    height: 100%
-    z-index: -1
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: -1
 #viewport 
-    height: 100%
-    width: 100%
-    display: table
-    position: relative
-    overflow: hidden
-    -webkit-user-select: none
-    -moz-user-select: none
-    -ms-user-select: none
-    -o-user-select: none
-    user-select: none
+	height: 100%
+	width: 100%
+	display: table
+	position: relative
+	overflow: hidden
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	-o-user-select: none
+	user-select: none
 #slidewrapper 
-    position: relative
-    width: calc(100% * 4)
-    height: 100vh
-    top: 0
-    left: 0
-    margin: 0
-    padding: 0
-    -webkit-transition: 1s
-    -o-transition: 1s
-    transition: 1s
-    -webkit-transition-timing-function: ease-in-out
-    -o-transition-timing-function: ease-in-out
-    transition-timing-function: ease-in-out
+	position: relative
+	width: calc(100% * 4)
+	height: 100vh
+	top: 0
+	left: 0
+	margin: 0
+	padding: 0
+	-webkit-transition: 1s
+	-o-transition: 1s
+	transition: 1s
+	-webkit-transition-timing-function: ease-in-out
+	-o-transition-timing-function: ease-in-out
+	transition-timing-function: ease-in-out
 #slidewrapper ul, #slidewrapper li 
-    margin: 0
-    padding: 0
+	margin: 0
+	padding: 0
 #slidewrapper li 
-    width: calc(100%/4)
-    height: 100%
-    list-style: none
-    display: inline
-    float: left
+	width: calc(100%/4)
+	height: 100%
+	list-style: none
+	display: inline
+	float: left
 .slide
-    position: relative 
-    img 
-        width: 100%
-        height: 100%
-    .description
-        position: absolute
-        display: flex
-        flex-direction: column
-        justify-content: center
-        width: 20%
-        height: 100vh
+	position: relative 
+	img 
+		width: 100%
+		height: 100%
+	.description
+		position: absolute
+		display: flex
+		flex-direction: column
+		justify-content: center
+		width: 20%
+		height: 100vh
+		h2
+			font-size: 52px
+			font-weight: lighter
+		p
+			color: #bbbbbb
+		button
+			display: flex
+			width: 70%
+			height: 10%
+			justify-content: center
+			background: #000000
+			font-size: 16px
+			outline: none
+			border: none
+			color: #ffffff
+			text-transform: uppercase
+			&:hover
+				box-shadow: 0 0 20px rgba(0,0,0,.8)
+				cursor: pointer
 #prev-button, #next-button
-    position: absolute
-    display: flex
-    justify-content: center
-    align-items: center
-    width: 50px
-    height: 50px
-    background-color: #e7e7e7
-    border: 4px solid #ffffff
-    color: #c8c8c8
-    border-radius: 50%
-    top: calc(50% - 25px)
-    &:hover 
-        cursor: pointer
-        background: #000000
+	position: absolute
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 50px
+	height: 50px
+	background-color: #e7e7e7
+	border: 4px solid #ffffff
+	color: #c8c8c8
+	border-radius: 50%
+	top: calc(50% - 25px)
+	&:hover 
+		cursor: pointer
+		background: #000000
+		box-shadow: 0 0 20px rgba(0,0,0,.8)
 #prev-button
-    left: 20px
+	left: 20px
 #next-button
-    right: 20px
+	right: 20px
 #nav-buttons
-    position: absolute
-    bottom: 20px
-    left: 20%
-    padding: 0
-    margin: 0
-    text-align: center
-    .slide-nav-button
-        position: relative
-        display: inline-block
-        list-style: none
-        width: 20px
-        height: 20px
-        background-color: #ffffff
-        border-radius: 5px
-        margin: 3px
-        &:hover 
-            cursor: pointer
+	position: absolute
+	bottom: 20px
+	left: 20%
+	padding: 0
+	margin: 0
+	text-align: center
+	.slide-nav-button
+		position: relative
+		display: inline-block
+		list-style: none
+		width: 20px
+		height: 20px
+		background-color: #ffffff
+		border-radius: 5px
+		margin: 3px
+		&:hover
+			cursor: pointer
+			box-shadow: 0 0 10px rgba(0,0,0,.8)
 header
-    width: 100%
-    .container
-        padding: 20px
-        .row
-            &:nth-child(1)
-                border-bottom: 1px solid #d4d4d4
-            .logotype
-                margin: 0 auto
-            .header-navigaton
-                i
-                    padding: 10px
-                    font-size: 24px
-                    cursor: pointer
+	width: 100%
+	.container
+		padding: 20px
+		.row
+			&:nth-child(1)
+				border-bottom: 1px solid #d4d4d4
+			.logotype
+				margin: 0 auto
+			.header-navigaton
+				display: flex
+				.hidden
+					position: relative
+					i
+						padding: 10px
+						font-size: 24px
+						cursor: pointer
+					.hover
+						display: none
+			ul
+				padding-top: 20px
+				display: flex
+				width: 100%
+				justify-content: space-around
+				text-transform: uppercase
+				font-weight: bold
+				li
+					cursor: pointer
