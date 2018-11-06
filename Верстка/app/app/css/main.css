@@ -10,13 +10,6 @@ ul {
 body {
   position: relative; }
 
-header {
-  width: 100%; }
-  header .container {
-    padding: 20px; }
-    header .container .row .logotype {
-      margin: 0 auto; }
-
 #slider {
   position: absolute;
   width: 100%;
@@ -39,7 +32,7 @@ header {
   position: relative;
   width: -webkit-calc(100% * 4);
   width: calc(100% * 4);
-  height: 100%;
+  height: 100vh;
   top: 0;
   left: 0;
   margin: 0;
@@ -63,25 +56,91 @@ header {
   display: inline;
   float: left; }
 
-.slide img {
-  width: 100%;
-  height: 100%; }
+.slide {
+  position: relative; }
+  .slide img {
+    width: 100%;
+    height: 100%; }
+  .slide .description {
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 20%;
+    height: 100vh; }
 
 #prev-button, #next-button {
   position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 50px;
   height: 50px;
-  background-color: #ffffff;
+  background-color: #e7e7e7;
+  border: 4px solid #ffffff;
+  color: #c8c8c8;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   top: -webkit-calc(50% - 25px);
   top: calc(50% - 25px); }
-
-#prev-button, #next-button {
-  cursor: pointer; }
+  #prev-button:hover, #next-button:hover {
+    cursor: pointer;
+    background: #000000; }
 
 #prev-button {
   left: 20px; }
 
 #next-button {
   right: 20px; }
+
+#nav-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 20%;
+  padding: 0;
+  margin: 0;
+  text-align: center; }
+  #nav-buttons .slide-nav-button {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    margin: 3px; }
+    #nav-buttons .slide-nav-button:hover {
+      cursor: pointer; }
+
+header {
+  width: 100%; }
+  header .container {
+    padding: 20px; }
+    header .container .row:nth-child(1) {
+      border-bottom: 1px solid #d4d4d4; }
+    header .container .row .logotype {
+      margin: 0 auto; }
+    header .container .row .header-navigaton i {
+      padding: 10px;
+      font-size: 24px;
+      cursor: pointer; }
